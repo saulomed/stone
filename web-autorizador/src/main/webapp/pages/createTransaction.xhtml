@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition template="/pages/_decorator.xhtml">
+	<ui:define name="title">#{i18n.createTransactionTitle}</ui:define>
+	<ui:define name="heading">#{i18n.createTransacationHeading}</ui:define>
+	<ui:define name="body">
+		<h:form>
+			<p:panel id="createPnl" header="#{i18n.newTransaction}"
+				toggleable="true" closable="false" toggleSpeed="500"
+				onCloseUpdate="growl" closeSpeed="2000" onToggleUpdate="growl"
+				widgetVar="panel">
+				<h:panelGrid class="ui-noborder">
+					<p:row>
+						<p:column>
+							<label>#{i18n.cardNumber}</label>
+						</p:column>
+						<!-- <h:inputTextarea label="text" id="lblText"
+						value="#{CreateTransactionService.transaction.cardNumber}" required="true" />
+					<h:message for="lblText"  /> -->
+						<p:column>
+							<p:inputText id="input1"
+								value="#{CreateTransactionService.transaction.cardNumber}" />
+						</p:column>
+
+					</p:row>
+					<p:row>
+						<p:column>
+							<label>#{i18n.merchantId}</label>
+						</p:column>
+						<!-- <h:inputTextarea label="text" id="lblText1"
+						value="#{CreateTransactionService.transaction.merchantId}" required="true" />
+					<h:message for="lblText1" /> -->
+						<p:column>
+							<p:inputText id="input2"
+								value="#{CreateTransactionService.transaction.merchantId}" />
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column>
+							<label>#{i18n.amount}</label>
+						</p:column>
+						<!-- <h:inputTextarea label="text" id="lblText2"
+						value="#{CreateTransactionService.transaction.amount}" required="true" />
+					<h:message for="lblText2" /> -->
+						<p:column>
+							<p:inputText id="input3"
+								value="#{CreateTransactionService.transaction.amount}" />
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column>
+							<label>#{i18n.password}</label>
+						</p:column>
+						<!-- <h:inputTextarea label="text" id="lblText3"
+						value="#{CreateTransactionService.transaction.password}" required="true" />
+					<h:message for="lblText3" /> -->
+						<p:column>
+							<p:password id="nonFeedback"
+								value="#{CreateTransactionService.transaction.password}"
+								required="true" />
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column>
+							<label>#{i18n.transactionType}</label>
+						</p:column>
+						<!-- <h:inputTextarea label="text" id="lblText4"
+						value="#{CreateTransactionService.transaction.transactionType}" required="true" />
+					<h:message for="lblText4" /> -->
+						<p:column>
+							<p:inputText id="input4"
+								value="#{CreateTransactionService.transaction.transactionType}" />
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column>
+							<label>#{i18n.parcelNumber}</label>
+						</p:column>
+						<!-- <h:inputTextarea label="text" id="lblText5"
+						value="#{CreateTransactionService.transaction.parcelNumber}" required="true" />
+					<h:message for="lblText5"  /> -->
+						<p:column>
+							<p:inputText id="input5"
+								value="#{CreateTransactionService.transaction.parcelNumber}" />
+						</p:column>
+					</p:row>
+					<h:commandButton title="#{i18n.save}" value="#{i18n.save}"
+						action="#{CreateTransactionService.create()}" />
+				</h:panelGrid>
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

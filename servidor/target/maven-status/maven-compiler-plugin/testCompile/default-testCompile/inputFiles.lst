@@ -1,0 +1,17 @@
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/wsclient/AutorizadorService.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/wsclient/AutorizadorServiceService.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/wsclient/ConsultaTransacoesResponse.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/infra/AbstractWsTest.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/wsclient/ConsultaTransacoesSolicitacao.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/transaction/TransactionSearchTest.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/wsclient/ConsultaTransacoes.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/merchant/MerchantServiceTest.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/wsclient/TransacationViewDTO.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/wsclient/ObjectFactory.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/wsclient/ConsultaTransacoesResposta.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/transaction/TransactionRequestTest.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/wsclient/TransactionType.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/transaction/TransactionServiceTest.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/wsclient/package-info.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/card/CardServiceTest.java
+/home/saulo/MyProjects/Projeto-Stone-Autorizador/servidor/src/test/java/br/com/stone/autorizador/infra/AbstractTest.java

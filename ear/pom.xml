@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.stone.autorizador</groupId>
+		<artifactId>autorizador</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<groupId>br.com.stone.autorizador</groupId>
+	<artifactId>ear</artifactId>
+	<packaging>ear</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>ear</name>
+	<dependencies>
+		<dependency>
+			<groupId>br.com.stone.autorizador</groupId>
+			<artifactId>servidor</artifactId>
+			<type>ejb</type>
+		</dependency>
+		<!--  <dependency>
+			<groupId>br.com.stone.autorizador</groupId>
+			<artifactId>web-autorizador</artifactId>
+			<type>war</type>
+		</dependency>  -->
+	</dependencies>
+
+	<build>
+		<finalName>stone-autorizador</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<generateApplicationXml>true</generateApplicationXml>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<version>6</version>
+					<skinnyWars>true</skinnyWars>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+						</manifest>
+					</archive>
+					<modules>
+						<!--<ejbModule> <groupId>br.com.stone.autorizador</groupId> <artifactId>servidor</artifactId> 
+							</ejbModule> <webModule> <groupId>br.com.stone.autorizador</groupId> <artifactId>web-autorizador</artifactId> 
+							</webModule> -->
+					</modules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

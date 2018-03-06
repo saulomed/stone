@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.stone.autorizador</groupId>
+		<artifactId>autorizador</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<groupId>br.com.stone.autorizador</groupId>
+	<artifactId>servidor</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>servidor</name>
+	<packaging>ejb</packaging>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.0-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+
+		<!-- TESTES -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.openejb</groupId>
+			<artifactId>javaee-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.openejb</groupId>
+			<artifactId>openejb-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.openejb</groupId>
+			<artifactId>openejb-cxf-rs</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.openejb</groupId>
+			<artifactId>openejb-cxf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+		</dependency>
+		<!-- <dependency> <groupId>org.powermock</groupId> <artifactId>powermock-module-junit4</artifactId> 
+			</dependency> <dependency> <groupId>org.powermock</groupId> <artifactId>powermock-api-mockito</artifactId> 
+			</dependency> -->
+	</dependencies>
+
+</project>

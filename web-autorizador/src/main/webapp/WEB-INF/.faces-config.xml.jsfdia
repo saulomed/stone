@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#pages#main.xhtml" PATH="/pages/main.xhtml"
+  SHAPE="528,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#pages#main.xhtml:0" NAME="item"
+   PATH="/pages/main.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="managerAnswer::#pages#createTransaction.xhtml" NAME="output"
+    PATH="/pages/createTransaction.xhtml"
+    TARGET="rules:#pages#createTransaction.xhtml" TITLE="managerAnswer" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="managerTransaction::#pages#managerTransactions.xhtml"
+    NAME="output1" PATH="/pages/managerTransactions.xhtml"
+    TARGET="rules:#pages#managerTransactions.xhtml"
+    TITLE="managerTransaction" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#createTransaction.xhtml"
+  PATH="/pages/createTransaction.xhtml" SHAPE="672,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#pages#managerTransactions.xhtml"
+  PATH="/pages/managerTransactions.xhtml" SHAPE="672,177,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

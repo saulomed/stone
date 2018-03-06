@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>br.com.stone.autorizador</groupId>
+	<artifactId>autorizador</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>servidor</module>
+		<module>web-autorizador</module>
+		<module>web-autorizador-impl</module>
+		<module>ear</module>
+	</modules>
+
+	<properties>
+		<org.projectlombok.version>1.16.8</org.projectlombok.version>
+		<maven-eclipse-plugin-version>2.10</maven-eclipse-plugin-version>
+		<javaee-api-version>6.0</javaee-api-version>
+		<org.apache.openejb.version>6.0-6</org.apache.openejb.version>
+		<hibernate.validator.version>4.0.2.GA</hibernate.validator.version>
+		<hibernate.version>4.2.2.Final</hibernate.version>
+		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+		<javax.version>1.0.0.GA</javax.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<junit.version>4.8.2</junit.version>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>br.com.stone.autorizador</groupId>
+				<artifactId>servidor</artifactId>
+				<version>${project.version}</version>
+				<type>ejb</type>
+			</dependency>
+			<dependency>
+				<groupId>br.com.stone.autorizador</groupId>
+				<artifactId>web-autorizador</artifactId>
+				<version>${project.version}</version>
+				<type>war</type>
+			</dependency>
+
+			<dependency>
+				<groupId>br.com.stone.autorizador</groupId>
+				<artifactId>web-autorizador-impl</artifactId>
+				<version>${project.version}</version>
+				<type>ejb</type>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate.javax.persistence</groupId>
+				<artifactId>hibernate-jpa-2.0-api</artifactId>
+				<version>1.0.1.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+			<!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-validator</artifactId> 
+				<version>${hibernate.version}</version> </dependency> -->
+			<!-- <dependency> <groupId>javax.validation</groupId> <artifactId>validation-api</artifactId> 
+				<version>${javax.version}</version> <scope>provided</scope> </dependency> -->
+
+			<dependency>
+				<groupId>asm</groupId>
+				<artifactId>asm</artifactId>
+				<version>3.3.1</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.jersey</groupId>
+				<artifactId>jersey-core</artifactId>
+				<version>1.4</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.jersey</groupId>
+				<artifactId>jersey-server</artifactId>
+				<version>1.4</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.ws.rs</groupId>
+				<artifactId>jsr311-api</artifactId>
+				<version>1.1.1</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.xml.bind</groupId>
+				<artifactId>jaxb-api</artifactId>
+				<version>2.1</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.resource</groupId>
+				<artifactId>connector-api</artifactId>
+				<version>1.6-alpha-1</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${org.projectlombok.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>3.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.primefaces</groupId>
+				<artifactId>primefaces</artifactId>
+				<version>6.0</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.faces</groupId>
+				<artifactId>jsf-api</artifactId>
+				<version>2.1</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>${javaee-api-version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.apache.openejb</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>6.0-6</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.openejb</groupId>
+				<artifactId>openejb-core</artifactId>
+				<version>4.7.2</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.openejb</groupId>
+				<artifactId>openejb-cxf-rs</artifactId>
+				<version>4.7.5</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.openejb</groupId>
+				<artifactId>openejb-cxf</artifactId>
+				<version>4.7.5</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-core</artifactId>
+				<version>2.2.1</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-all</artifactId>
+				<version>1.10.19</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-module-junit4</artifactId>
+				<version>1.6.4</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-api-mockito</artifactId>
+				<version>1.6.4</version>
+				<scope>test</scope>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<!-- <compilerArguments> <endorseddirs>${endorsed.dir}</endorseddirs> 
+						</compilerArguments> -->
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ejb-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<ejbVersion>3.1</ejbVersion>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+
+	<repositories>
+		<repository>
+			<id>primefaces-repo</id>
+			<name>Prime Technology Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+</project>

@@ -1,0 +1,17 @@
+br/com/stone/autorizador/transaction/TransactionRequestTest.class
+br/com/stone/autorizador/wsclient/ConsultaTransacoesResponse.class
+br/com/stone/autorizador/wsclient/TransactionType.class
+br/com/stone/autorizador/wsclient/ConsultaTransacoesSolicitacao.class
+br/com/stone/autorizador/wsclient/ConsultaTransacoesResposta.class
+br/com/stone/autorizador/transaction/TransactionServiceTest.class
+br/com/stone/autorizador/infra/AbstractTest.class
+br/com/stone/autorizador/transaction/TransactionSearchTest.class
+br/com/stone/autorizador/merchant/MerchantServiceTest.class
+br/com/stone/autorizador/wsclient/ObjectFactory.class
+br/com/stone/autorizador/wsclient/AutorizadorService.class
+br/com/stone/autorizador/wsclient/AutorizadorServiceService.class
+br/com/stone/autorizador/card/CardServiceTest.class
+br/com/stone/autorizador/wsclient/package-info.class
+br/com/stone/autorizador/wsclient/ConsultaTransacoes.class
+br/com/stone/autorizador/wsclient/TransacationViewDTO.class
+br/com/stone/autorizador/infra/AbstractWsTest.class

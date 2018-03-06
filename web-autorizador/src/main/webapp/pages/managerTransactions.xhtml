@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+<ui:composition template="/pages/_decorator.xhtml">
+	<ui:define name="title">
+		<h:outputText value="#{i18n.listTitle}" />
+	</ui:define>
+	<ui:define name="heading">
+		<h:outputText value="#{i18n.listHeading}" />
+	</ui:define>
+	<ui:define name="body">
+		<h:form>
+			<p:panel>
+				<p:dataTable var="transaction"
+					value="#{ManagerTransactionService.transactions}" id="table"
+					emptyMessage="No Records to Display" style="display:block;">
+					<f:facet name="header">
+            			#{i18n.transactions}
+        			</f:facet>
+					<p:column headerText="#{i18n.gridId}">
+						<h:outputText value="#{transaction.usn}" /> 
+					</p:column>
+
+					<p:column headerText="#{i18n.gridCard}">
+						<h:outputText value="#{transaction.card}" />
+					</p:column>
+
+					<p:column headerText="#{i18n.gridAmount}">
+						<h:outputText value="#{transaction.amount}" />
+					</p:column>
+
+					<p:column headerText="#{i18n.gridMerchant}">
+						<h:outputText value="#{transaction.merchant}" />
+					</p:column>
+					<p:column headerText="#{i18n.gridDate}">
+						<h:outputText value="#{transaction.referenceDate}" />
+					</p:column>
+				</p:dataTable>
+			</p:panel>
+			<br />
+			<br />
+			<br />
+			<br />
+			<h:commandButton title="#{i18n.back}" value="#{i18n.back}"
+				action="back" />
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
