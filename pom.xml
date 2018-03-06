@@ -17,17 +17,12 @@
 
 	<properties>
 		<org.projectlombok.version>1.16.8</org.projectlombok.version>
-		<maven-eclipse-plugin-version>2.10</maven-eclipse-plugin-version>
 		<javaee-api-version>6.0</javaee-api-version>
 		<org.apache.openejb.version>6.0-6</org.apache.openejb.version>
-		<hibernate.validator.version>4.0.2.GA</hibernate.validator.version>
 		<hibernate.version>4.2.2.Final</hibernate.version>
 		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
-		<javax.version>1.0.0.GA</javax.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<junit.version>4.8.2</junit.version>
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
 
 	</properties>
 
@@ -73,11 +68,6 @@
 				<artifactId>hibernate-entitymanager</artifactId>
 				<version>${hibernate.version}</version>
 			</dependency>
-			<!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-validator</artifactId> 
-				<version>${hibernate.version}</version> </dependency> -->
-			<!-- <dependency> <groupId>javax.validation</groupId> <artifactId>validation-api</artifactId> 
-				<version>${javax.version}</version> <scope>provided</scope> </dependency> -->
-
 			<dependency>
 				<groupId>asm</groupId>
 				<artifactId>asm</artifactId>
@@ -145,7 +135,7 @@
 			<dependency>
 				<groupId>org.apache.openejb</groupId>
 				<artifactId>javaee-api</artifactId>
-				<version>6.0-6</version>
+				<version>${org.apache.openejb.version}</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
